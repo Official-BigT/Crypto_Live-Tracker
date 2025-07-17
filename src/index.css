@@ -10,3 +10,14 @@
     rgba(17, 24, 39, 0.9)
   );
 }
+
+.footer {
+  /* position: fixed; */
+  bottom: 1rem;
+  width: 100%;
+  text-align: center;
+  padding: 20px 0px;
+  background-color: rgba(17, 24, 39, 0.8);
+  color: white;
+  font-size: 14px;
+}

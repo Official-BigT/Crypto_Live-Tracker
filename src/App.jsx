@@ -15,6 +15,10 @@ function App() {
           {/* <Route path="/about" element={<About />} /> */}
           {/* <Route path="/contact" element={<Contact/>}/> */}
         </Routes>
+        <div className="footer">
+          <p>Made with ❤️ by Official Big T</p>
+          <p>Copyrights reserved by {"Brick Red Wraiths🧱"}</p>
+        </div>
       </div>
     </>
   );
