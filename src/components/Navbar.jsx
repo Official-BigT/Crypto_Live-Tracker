@@ -6,7 +6,8 @@ const Navbar = () => {
   const [input, setInput] = useState("");
   const [filteredCoins, setFilteredCoins] = useState([]);
   const { cryptolist = [], setSearchTerm } = useContext(CryptoContext);
-
+  // const { id, name } = cryptolist[5] || {}; // Default to first coin or empty if none
+  // console.log(id, name);
   // To handle the form input
 
   const searchHandler = (event) => {
@@ -35,7 +36,7 @@ const Navbar = () => {
       const suggestions = cryptolist.filter((coin) =>
         coin.name.toLowerCase().includes(value.toLowerCase())
       );
-      console.log(suggestions);
+      // console.log(suggestions);
 
       // it takes only the first 5 matching suggestions to keep the dropdown concise
       // Update the filteredCoins state, which will then render the suggestion list
@@ -55,7 +56,7 @@ const Navbar = () => {
         </span>
       </a>
 
-      {/* Search */}
+      {/* <Search/> */}
 
       <form
         onSubmit={searchHandler}
@@ -81,12 +82,16 @@ const Navbar = () => {
         {filteredCoins.length > 0 && (
           <ul className="absolute w-full bg-gray-800/95 border border-gray-700 mt-2 rounded-lg shadow-xl z-10 backdrop-blur-md">
             {filteredCoins.map((coin, idx) => (
-              <li key={idx} className="px-4 py-2 hover:bg-emerald-600/30 cursor-pointer text-gray-100"
-                onClick={() => {setInput(coin.name);
-                    // anytime you click the set form should be cleared.
-                    setFilteredCoins([]);
-                }}>
-                  {coin.name}
+              <li
+                key={idx}
+                className="px-4 py-2 hover:bg-emerald-600/30 cursor-pointer text-gray-100"
+                onClick={() => {
+                  setInput(coin.name);
+                  // anytime you click the set form should be cleared.
+                  setFilteredCoins([]);
+                }}
+              >
+                {coin.name}
               </li>
             ))}
           </ul>
@@ -95,5 +100,7 @@ const Navbar = () => {
     </nav>
   );
 };
+
+
 
 export default Navbar;

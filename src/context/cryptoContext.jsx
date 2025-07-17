@@ -49,6 +49,9 @@ useEffect(() => {
   fetchCryptoData();
 }, [currentCurrency]); //it also runs once when the component mounts for the first time to fetch initial data.
 
+
+// Search functionality
+// Whenever the search term changes, it filters the cryptolist to only include cryptos that match.
 useEffect(() => {
   if (searchTerm.trim() === "") {
     setFilteredCryptos(cryptolist);

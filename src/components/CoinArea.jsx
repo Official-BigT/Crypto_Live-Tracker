@@ -7,7 +7,7 @@ const CoinArea = () => {
   const [isCurrencyDropDownOpen, setIsCurrencyDropOpen] = useState(false);
   const { filteredCryptos, currentCurrency, setCurrentCurrency } =
     useContext(CryptoContext);
-  // console.log(filteredCryptos)
+  // console.log(filteredCryptos);
 
   // To handle the symbol being chosen
   const handleCurrencySelect = (selectedCurrency) => {
