@@ -29,7 +29,10 @@ const AreaChart = ({ historicalData, currencySymbol }) => {
       setData([["Date", "Price"], ...formattedData]);
     }
   }, [historicalData]);
-  console.log(currencySymbol);
+  // console.log(currencySymbol);
+
+  // The options object defines how the chart should look and behave.
+  // It includes settings for the axes, colors, tooltips, and more.
   const options = {
     backgroundColor: "transparent",
     legend: "none",
